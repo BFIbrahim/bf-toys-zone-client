@@ -34,7 +34,7 @@ const Navigation = () => {
                 <div className="navbar-end">
                     <img className='w-10' src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
                     
-                    <button className='btn bg-red-600 border-none ms-4 me-4 py-0 px-2'>Login</button>
+                    <Link to='/login'><button className='btn bg-red-600 border-none ms-4 me-4 py-0 px-2'>Login</button></Link>
                     <button className='px-2 btn bg-red-600 border-none'>Logout</button>
                 </div>
             </div>
