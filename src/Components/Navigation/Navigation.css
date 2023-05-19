@@ -1,0 +1,4 @@
+.nav-content a:hover{
+    color: rgb(215, 45, 45);
+    transition: 0.2s;
+}
