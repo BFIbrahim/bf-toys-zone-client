@@ -1,12 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Subcategory from '../SubCategory/Subcategory';
 
 const Gallery = () => {
     return (
         <div>
             <div className='text-center'>
                 <h1 className='text-3xl text-red-600 text-center mt-20 font-bold'>Toys Gallery</h1>
-                <p className='mb-10'>Just See our Best Collection from here. This Is Our Toys Gallery</p>
+                <p className='mb-5 border-b-2 md:w-2/5 mx-auto pb-2'>Just See our Best Collection from here. This Is Our Toys Gallery</p>
             </div>
+
+            <Subcategory></Subcategory>
+
             <div className='md:flex md:justify-evenly'>
                 <div className="card md:w-96 bg-orange-50 shadow-xl p-4 mb-6">
                     <figure><img src="https://m.media-amazon.com/images/I/41-FTW+LZvL._AC_.jpg" alt="Shoes" /></figure>
@@ -46,7 +51,7 @@ const Gallery = () => {
                 <div className="card md:w-96 bg-orange-50 shadow-xl p-4  mb-6">
                     <figure><img src="https://m.media-amazon.com/images/I/81Y4hHPYzyL._AC_UF894,1000_QL80_.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Daron UPS truck</h2>
+                        <h2 className="card-title">Daron UPS Toy car</h2>
                         <p className="font-bold text-green-500">Price: $87</p>
                         <div className='flex'>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
@@ -71,7 +76,7 @@ const Gallery = () => {
                 <div className="card md:w-96 bg-orange-50 shadow-xl p-4 mb-6">
                     <figure><img src="https://m.media-amazon.com/images/I/71yyoiSDS-S._AC_UF894,1000_QL80_.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Lamborgini Toy</h2>
+                        <h2 className="card-title">Lamborgini Toy car</h2>
                         <p className="font-bold text-green-500">Price: $120</p>
                         <div className='flex'>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>

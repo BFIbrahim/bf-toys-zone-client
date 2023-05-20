@@ -8,6 +8,9 @@ import AllToys from '../Components/AllToys/AllToys';
 import AddAToy from '../Components/AddAToy/AddAToy';
 import Login from '../Components/Login/Login';
 import Register from '../Components/Register/Register';
+import SportsCar from '../Components/SportsCar/SportsCar';
+import PoliceCar from '../Components/PoliceCar/PoliceCar';
+import MiniFireTruck from '../Components/MiniFireTruck/MiniFireTruck';
 
 const Router = createBrowserRouter([
     {
@@ -41,6 +44,19 @@ const Router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/sportscar',
+                element: <SportsCar></SportsCar>
+            },
+            {
+                path:'/policecar',
+                element: <PoliceCar></PoliceCar>
+            },
+            {
+                path: '/miniftruck',
+                element: <MiniFireTruck></MiniFireTruck>
+                
             }
         ]
     }
