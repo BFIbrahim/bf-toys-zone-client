@@ -1,0 +1,7 @@
+.sub-sec a:hover{
+    color: white;
+    transition: 0.2s;
+    background-color: rgb(199, 11, 11);
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -52,7 +52,7 @@ const SportsCar = () => {
                 <div className="card md:w-96 bg-orange-50 shadow-xl p-4  mb-6">
                     <figure><img src="https://media.4rgos.it/s/Argos/9529276_R_SET?$Main768$&w=620&h=620" alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Daron UPS Toy car</h2>
+                        <h2 className="card-title">Regular Sports Car</h2>
                         <p className="font-bold text-green-500">Price: $87</p>
                         <div className='flex'>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
