@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
+
+
+    const hundleLogin = event => {
+        event.preventDefault()
+    }
+
     return (
         <div className='mx-auto text-center bg-orange-50 md:w-2/4 md:rounded-md py-10 my-20'>
             <h1 className='text-3xl font-bold text-red-600 mt-5'>Please Login</h1>
-            <form>
+            <form onSubmit={hundleLogin}>
                 <input className='border mt-5 p-3 w-96 rounded-md' type="email" name='email' placeholder='Your Email' /><br />
                 <input className='border mt-5 p-3 w-96 rounded-md' type="password" name="password" id="" placeholder='Passord'/><br />
                 <input className='submit-btn border mt-5 p-3 w-96 rounded-md bg-red-600 border-none text-white font-bold' type="submit" value="Submit" />
