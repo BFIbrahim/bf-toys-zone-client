@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css'
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Navigation = () => {
+
+    const {LogoutUser} = useContext(AuthContext)
+
+    const hundleSignOut = (event) =>{
+        event.preventDefault()
+        LogoutUser()
+        .then(result =>{
+            alert('Logout Successfull')
+        })
+        .catch(error => console.log(error.message))
+    }
+
     return (
         <div className='bg-orange-100'>
             <div className="navbar md:px-10">
@@ -35,7 +48,7 @@ const Navigation = () => {
 
                     
                     <Link to='/login'><button className='btn bg-red-600 border-none ms-4 me-4 py-0 px-2'>Login</button></Link>
-                    <button className='px-2 btn bg-red-600 border-none'>Logout</button>
+                    <button onClick={hundleSignOut}  className='px-2 btn bg-red-600 border-none'>Logout</button>
 
                     <img className='w-10 ms-3' src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
                 </div>
