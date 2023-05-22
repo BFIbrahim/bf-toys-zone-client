@@ -20,6 +20,7 @@ const Register = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            alert('Registration Successfull')
         })
         .catch(error => {
             console.log(error.message);
