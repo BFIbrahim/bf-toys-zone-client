@@ -2,10 +2,17 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css'
 import { AuthContext } from '../Provider/AuthProvider';
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
 
-    const {signInUser} = useContext(AuthContext)
+    const {signInUser, googleSignIn} = useContext(AuthContext)
+
+    const provider = new GoogleAuthProvider();
+
+    const hundlegoogleSignIn = (event) =>{
+        googleSignIn(provider)
+    }
 
     const hundleLogin = event => {
         event.preventDefault();
@@ -35,7 +42,7 @@ const Login = () => {
                 <input className='submit-btn border mt-5 p-3 w-96 rounded-md bg-red-600 border-none text-white font-bold' type="submit" value="Submit" />
 
                 <p>or</p>
-                <p className='google-btn flex justify-center mt-3 border w-96 p-3 mx-auto bg-gray-100 rounded-md'>Login With <img className='w-20 ms-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="" /></p>
+                <p onClick={hundlegoogleSignIn} className='google-btn flex justify-center mt-3 border w-96 p-3 mx-auto bg-gray-100 rounded-md'>Login With <img className='w-20 ms-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="" /></p>
 
                 <p className='mt-3 '>You Have't any account <Link to='/register' className='text-red-600 font-bold'>Please Register</Link></p>
             </form>
