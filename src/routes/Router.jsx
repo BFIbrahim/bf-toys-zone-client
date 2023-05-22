@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import LoginPage from '../Layouts/LoginPage';
+import Main from '../Layouts/Main';
 import Home from '../Components/Home/Home';
 import MyToys from '../Components/MyToys/MyToys';
 import Blog from '../Components/Blog/Blog';
@@ -15,7 +15,7 @@ import MiniFireTruck from '../Components/MiniFireTruck/MiniFireTruck';
 const Router = createBrowserRouter([
     {
         path: '/',
-        element: <LoginPage></LoginPage>,
+        element: <Main></Main>,
         children: [
             {
                 path: '/',
