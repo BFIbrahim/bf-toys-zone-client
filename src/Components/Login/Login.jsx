@@ -10,7 +10,7 @@ const Login = () => {
 
     const provider = new GoogleAuthProvider();
 
-    const hundlegoogleSignIn = (event) =>{
+    const hundlegoogleSignIn = () =>{
         googleSignIn(provider)
     }
 
