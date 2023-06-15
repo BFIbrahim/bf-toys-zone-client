@@ -18,7 +18,7 @@ const SportsCar = () => {
                     <figure><img src="https://m.media-amazon.com/images/I/71Tc4KwjZ2S.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Sports Car</h2>
-                        <p className="font-bold text-green-500">Price: $110</p>
+                        <p className="font-bold text-green-500 text-start">Price: $110</p>
                         <div className='flex'>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
@@ -35,7 +35,7 @@ const SportsCar = () => {
                     <figure><img src="https://img.fruugo.com/product/7/36/158079367_max.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Laxurious Sports Car</h2>
-                        <p className="font-bold text-green-500">Price: $99</p>
+                        <p className="font-bold text-green-500 text-start">Price: $99</p>
                         <div className='flex'>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
@@ -53,7 +53,7 @@ const SportsCar = () => {
                     <figure><img src="https://media.4rgos.it/s/Argos/9529276_R_SET?$Main768$&w=620&h=620" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Regular Sports Car</h2>
-                        <p className="font-bold text-green-500">Price: $87</p>
+                        <p className="font-bold text-green-500 text-start">Price: $87</p>
                         <div className='flex'>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
 

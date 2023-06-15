@@ -35,10 +35,10 @@ const AllToys = () => {
                             toys.map((toy, index) =>                         <tr>
                             <td>{index + 1}</td>
                             <td>{toy.Seller}</td>
-                            <td>{toy.ToyName}</td>
-                            <td>{toy.Subcategory}</td>
+                            <td>{toy.Toy_Name}</td>
+                            <td>{toy.Sub_category}</td>
                             <td>{toy.Price}</td>
-                            <td>{toy.AvailableQuantity}</td>
+                            <td>{toy.Available_Quantity}</td>
                             <td><button className='btn bg-red-600 p-3 border-none'>View Details</button></td>
                         </tr>)
                         }

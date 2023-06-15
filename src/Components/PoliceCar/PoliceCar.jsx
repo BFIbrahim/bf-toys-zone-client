@@ -34,7 +34,7 @@ const PoliceCar = () => {
                     <figure><img src="https://i5.walmartimages.com/asr/0e9c3351-0623-4637-8103-e22f4edbe2ac.9658562273d1c9145b09d28ecf032d9c.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF" alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Police Car</h2>
-                        <p className="font-bold text-green-500">Price: $99</p>
+                        <p className="font-bold text-green-500 text-start">Price: $99</p>
                         <div className='flex'>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
                             <span><img className='w-5 me-2' src="https://img.uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /></span>
