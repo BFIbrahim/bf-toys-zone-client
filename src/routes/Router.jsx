@@ -11,6 +11,8 @@ import Register from '../Components/Register/Register';
 import SportsCar from '../Components/SportsCar/SportsCar';
 import PoliceCar from '../Components/PoliceCar/PoliceCar';
 import MiniFireTruck from '../Components/MiniFireTruck/MiniFireTruck';
+import ParivetRoutes from './ParivetRoutes';
+import ToyDetails from '../Components/ToyDetails/ToyDetails';
 
 const Router = createBrowserRouter([
     {
@@ -22,15 +24,27 @@ const Router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path:'/alltoys',
+                path: '/alltoys',
                 element: <AllToys></AllToys>
             },
             {
-                path:'/mytoys',
+                path: 'Id',
+                element: <ParivetRoutes>
+                    <ToyDetails></ToyDetails>
+                </ParivetRoutes>,
+                loader: async ({ params }) => {
+                    const res = await fetch('http://localhost:5000/toys')
+                    const data = await res.json();
+                    const toys = data.find(toy => toy.id == params.Id)
+                    return toys
+                }
+            },
+            {
+                path: '/mytoys',
                 element: <MyToys></MyToys>
             },
             {
-                path:'/addAToy',
+                path: '/addAToy',
                 element: <AddAToy></AddAToy>
             },
             {
@@ -38,25 +52,25 @@ const Router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
             {
-                path:'/sportscar',
+                path: '/sportscar',
                 element: <SportsCar></SportsCar>
             },
             {
-                path:'/policecar',
+                path: '/policecar',
                 element: <PoliceCar></PoliceCar>
             },
             {
                 path: '/miniftruck',
                 element: <MiniFireTruck></MiniFireTruck>
-                
+
             }
         ]
     }

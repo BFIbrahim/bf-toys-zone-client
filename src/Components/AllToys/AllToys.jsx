@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AllToys = () => {
 
@@ -32,14 +33,16 @@ const AllToys = () => {
                         {/* row 1 */}
 
                         {
-                            toys.map((toy, index) =>                         <tr>
+                            toys.map((toy, index) =><tr 
+                            key="toy._id"
+                            >
                             <td>{index + 1}</td>
                             <td>{toy.Seller}</td>
                             <td>{toy.Toy_Name}</td>
                             <td>{toy.Sub_category}</td>
                             <td>{toy.Price}</td>
                             <td>{toy.Available_Quantity}</td>
-                            <td><button className='btn bg-red-600 p-3 border-none'>View Details</button></td>
+                            <td><Link to={`/alltoys/${toys?._id}`}><button className='btn bg-red-600 p-3 border-none'>View Details</button></Link></td>
                         </tr>)
                         }
 
