@@ -47,10 +47,10 @@ const MyToys = () => {
                 key={toy._id}
               >
                 <td>{index + 1}</td>
-                <td>{toy.Toy_Name}</td>
-                <td>{toy.Sub_category}</td>
+                <td>{toy.ToyName}</td>
+                <td>{toy.Subcategory}</td>
                 <td>{toy.Price}</td>
-                <td>{toy.Available_Quantity}</td>
+                <td>{toy.AvailableQuantity}</td>
                 <td><Link><button className='btn bg-red-600 p-3 border-none'>Delete</button></Link></td>
               </tr>)
             }

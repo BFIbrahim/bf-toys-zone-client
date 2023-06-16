@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Components/Provider/AuthProvider';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, Navigate } from 'react-router-dom';
 
 const ParivetRoutes = ({children}) => {
     const {user, loading} = useContext(AuthContext)
     const location = useLocation()
-    const Navigate = useNavigate()
+
+    console.log(user);
 
     if(loading){
         return <div>Loading</div>

@@ -29,8 +29,10 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/alltoys/:id',
-                element:
+                element: <ParivetRoutes>
                     <ToyDetails></ToyDetails>,
+                </ParivetRoutes>,
+                   
                 loader: ({ params }) => fetch(`http://localhost:5000/toys/${params?.id}`)
 
             },
@@ -39,10 +41,15 @@ const Router = createBrowserRouter([
                 element: <ParivetRoutes>
                     <MyToys></MyToys>
                 </ParivetRoutes>
+
+
             },
             {
                 path: '/addAToy',
-                element: <AddAToy></AddAToy>
+                element: <ParivetRoutes>
+                    <AddAToy></AddAToy>
+                </ParivetRoutes>
+
             },
             {
                 path: '/blog',
