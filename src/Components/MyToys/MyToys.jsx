@@ -25,15 +25,14 @@ const MyToys = () => {
 
 
   return (
-    <div>
+    <div className='mb-10 mt-8'>
       <div className="overflow-x-auto">
         <table className="table w-full">
           {/* head */}
           <thead>
             <tr>
               <th>No.</th>
-              <th>Seller</th>
-              <th>Toy</th>
+              <th>Toy Name</th>
               <th>Sub Category</th>
               <th>Price</th>
               <th>Available Quantity</th>
@@ -48,12 +47,11 @@ const MyToys = () => {
                 key={toy._id}
               >
                 <td>{index + 1}</td>
-                <td>{toy.Seller}</td>
                 <td>{toy.Toy_Name}</td>
                 <td>{toy.Sub_category}</td>
                 <td>{toy.Price}</td>
                 <td>{toy.Available_Quantity}</td>
-                <td><Link to={`/alltoys/${toy._id}`}><button className='btn bg-red-600 p-3 border-none'>View Details</button></Link></td>
+                <td><Link><button className='btn bg-red-600 p-3 border-none'>Delete</button></Link></td>
               </tr>)
             }
 

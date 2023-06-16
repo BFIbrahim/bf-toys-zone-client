@@ -12,8 +12,8 @@ const AddAToy = () => {
     const onSubmit = data => {
         console.log(data)
 
-        const {Seller, Toy_Name, Sub_category, Price, Available_Quantity} = data;
-        const newToy = {Seller, Toy_Name, Sub_category, Price, Available_Quantity, userEmail: userEmail}
+        const {Seller, ToyName, Subcategory, Price, AvailableQuantity, ImageURL} = data;
+        const newToy = {Seller, ToyName, Subcategory, Price, AvailableQuantity, ImageURL,userEmail: userEmail}
 
         fetch('http://localhost:5000/toys', {
             method: 'POST',
@@ -41,7 +41,7 @@ const AddAToy = () => {
                 <div className="card-body md:w-4/6 mx-auto">
                     <div className="form-control">
                         <input type="text"
-                            {...register("Toy_Name", { required: true })}
+                            {...register("ToyName", { required: true })}
                             placeholder="Toy Name" className="input input-bordered" />
                     </div>
 
@@ -52,7 +52,7 @@ const AddAToy = () => {
                     </div>
                     <div className="form-control">
                         <input type="text"
-                            {...register("picURL", { required: true })}
+                            {...register("ImageURL", { required: true })}
                             placeholder="Picture URL" className="input input-bordered" />
                     </div>
                     <div className="form-control">
@@ -60,7 +60,7 @@ const AddAToy = () => {
                     </div>
                     <div className="form-control">
                         <input type="text"
-                            {...register("Sub_category", { required: true })}
+                            {...register("Subcategory", { required: true })}
                             placeholder="Sub Category" className="input input-bordered" />
                     </div>
 
@@ -78,7 +78,7 @@ const AddAToy = () => {
 
                     <div className="form-control">
                         <input type="text"
-                            {...register("Available_Quantity", { required: true })}
+                            {...register("AvailableQuantity", { required: true })}
                             placeholder="Available Quantity" className="input input-bordered" />
                     </div>
 

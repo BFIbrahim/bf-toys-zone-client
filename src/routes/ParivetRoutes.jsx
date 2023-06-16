@@ -3,15 +3,18 @@ import { AuthContext } from '../Components/Provider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const ParivetRoutes = ({children}) => {
-    const {user} = useContext(AuthContext)
+    const {user, loading} = useContext(AuthContext)
     const location = useLocation()
-    const navigate = useNavigate()
+    const Navigate = useNavigate()
 
-    if(user){
-        return children
+    if(loading){
+        return <div>Loading</div>
     }
     // return <Navigate to='/login' state={{from:location}} replace></Navigate>
-    return <Navigate state = {{ from: location }} to="/login" replace={true}></Navigate>
+
+    return (
+        user ? <div>{ children }</div> : <Navigate to={ '/login' } state={ { from: location } } replace />
+    );
 };
 
 export default ParivetRoutes;
