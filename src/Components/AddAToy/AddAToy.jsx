@@ -1,24 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form"
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 const AddAToy = () => {
 
+    const {user} = useContext(AuthContext)
+    const userEmail = user?.email
+
     const { register, handleSubmit, watch } = useForm();
     const onSubmit = data => {
         console.log(data)
+
+        const {Seller, Toy_Name, Sub_category, Price, Available_Quantity} = data;
+        const newToy = {Seller, Toy_Name, Sub_category, Price, Available_Quantity, userEmail: userEmail}
 
         fetch('http://localhost:5000/toys', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(newToy)
         })
         .then(res => res.json())
         .then(addedToy => {
-            console.log(addedToy);
+           alert('product added')
+           data.reset()
         })
+
+        
 
 
 
@@ -46,8 +56,7 @@ const AddAToy = () => {
                             placeholder="Picture URL" className="input input-bordered" />
                     </div>
                     <div className="form-control">
-                        <input type="text"
-                            placeholder="Seller Email" className="input input-bordered" />
+                        <input type="text"placeholder="Seller Email" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <input type="text"

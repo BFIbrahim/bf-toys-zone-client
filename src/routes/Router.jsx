@@ -28,16 +28,10 @@ const Router = createBrowserRouter([
                 element: <AllToys></AllToys>
             },
             {
-                path: 'Id',
-                element: <ParivetRoutes>
-                    <ToyDetails></ToyDetails>
-                </ParivetRoutes>,
-                loader: async ({ params }) => {
-                    const res = await fetch('http://localhost:5000/toys')
-                    const data = await res.json();
-                    const toys = data.find(toy => toy.id == params.Id)
-                    return toys
-                }
+                path: '/alltoys/:id',
+                element: <ToyDetails></ToyDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/toys/${params?.id}`)
+
             },
             {
                 path: '/mytoys',

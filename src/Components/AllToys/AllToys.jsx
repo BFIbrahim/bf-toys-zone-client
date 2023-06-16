@@ -34,7 +34,7 @@ const AllToys = () => {
 
                         {
                             toys.map((toy, index) =><tr 
-                            key="toy._id"
+                            key={toy._id}
                             >
                             <td>{index + 1}</td>
                             <td>{toy.Seller}</td>
@@ -42,7 +42,7 @@ const AllToys = () => {
                             <td>{toy.Sub_category}</td>
                             <td>{toy.Price}</td>
                             <td>{toy.Available_Quantity}</td>
-                            <td><Link to={`/alltoys/${toys?._id}`}><button className='btn bg-red-600 p-3 border-none'>View Details</button></Link></td>
+                            <td><Link to={`/alltoys/${toy._id}`}><button className='btn bg-red-600 p-3 border-none'>View Details</button></Link></td>
                         </tr>)
                         }
 
