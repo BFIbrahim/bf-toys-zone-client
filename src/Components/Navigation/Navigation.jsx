@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css'
 import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Navigation = () => {
 
@@ -11,7 +12,13 @@ const Navigation = () => {
         event.preventDefault()
         LogoutUser()
             .then(result => {
-                alert('Logout Successfull')
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Logout Successfull',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
             })
             .catch(error => console.log(error.message))
     }

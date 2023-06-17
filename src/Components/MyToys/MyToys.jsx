@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
 
   const { user } = useContext(AuthContext)
   const email = user?.email
   // console.log(email);
-  const [myToy, setMytoy] = useState()
+  const [myToy, setMytoy] = useState([])
 
   useEffect(() => {
     fetch(`http://localhost:5000/toys`)
@@ -17,12 +18,28 @@ const MyToys = () => {
       })
   }, []);
 
-  console.log(myToy);
-  // console.log(email);
+
+  const hundleDelete = item => {
+    console.log(item[0]?._id);
+
+    fetch(`http://localhost:5000/toys/${item[0]?._id}`, {
+      method: "DELETE"
+    })
+      .then(res => res.json())
+      .then(data => {
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Deleted!',
+            showConfirmButton: false,
+            timer: 1500
+          })
+      })
+
+  }
+
 
   const filteredToys = myToy?.filter(toy => toy.userEmail === email);
-  console.log(filteredToys);
-
 
   return (
     <div className='mb-10 mt-8'>
@@ -51,7 +68,7 @@ const MyToys = () => {
                 <td>{toy.Subcategory}</td>
                 <td>{toy.Price}</td>
                 <td>{toy.AvailableQuantity}</td>
-                <td><Link><button className='btn bg-red-600 p-3 border-none'>Delete</button></Link></td>
+                <td><Link><button onClick={() => hundleDelete(filteredToys)} className='btn bg-red-600 p-3 border-none'>Delete</button></Link></td>
               </tr>)
             }
 

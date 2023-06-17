@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Login.css'
 import { AuthContext } from '../Provider/AuthProvider';
 import { GoogleAuthProvider } from "firebase/auth";
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -26,7 +27,14 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
-            alert('Login SucessFull');
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Login Successfull',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              
         })
         .catch(error => {
             console.log(error.message);
