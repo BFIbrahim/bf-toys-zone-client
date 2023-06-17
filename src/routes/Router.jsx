@@ -13,6 +13,7 @@ import PoliceCar from '../Components/PoliceCar/PoliceCar';
 import MiniFireTruck from '../Components/MiniFireTruck/MiniFireTruck';
 import ParivetRoutes from './ParivetRoutes';
 import ToyDetails from '../Components/ToyDetails/ToyDetails';
+import NotFound from './notFound';
 
 const Router = createBrowserRouter([
     {
@@ -75,9 +76,15 @@ const Router = createBrowserRouter([
                 path: '/miniftruck',
                 element: <MiniFireTruck></MiniFireTruck>
 
+            },
+            {
+                path: '*',
+                element: <NotFound></NotFound>
             }
+
         ]
     }
+
 ])
 
 export default Router;
