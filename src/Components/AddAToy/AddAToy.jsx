@@ -16,7 +16,7 @@ const AddAToy = () => {
         const {Seller, ToyName, Subcategory, Price, AvailableQuantity, ImageURL} = data;
         const newToy = {Seller, ToyName, Subcategory, Price, AvailableQuantity, ImageURL,userEmail: userEmail}
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://bf-toy-cars-server.vercel.app/toys', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

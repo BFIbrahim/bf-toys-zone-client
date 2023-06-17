@@ -11,7 +11,7 @@ const MyToys = () => {
   const [myToy, setMytoy] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys`)
+    fetch(`https://bf-toy-cars-server.vercel.app/toys`)
       .then(res => res.json())
       .then(data => {
         setMytoy(data);
@@ -22,7 +22,7 @@ const MyToys = () => {
   const hundleDelete = item => {
     console.log(item[0]?._id);
 
-    fetch(`http://localhost:5000/toys/${item[0]?._id}`, {
+    fetch(`https://bf-toy-cars-server.vercel.app/toys/${item[0]?._id}`, {
       method: "DELETE"
     })
       .then(res => res.json())

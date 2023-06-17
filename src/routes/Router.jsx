@@ -34,7 +34,7 @@ const Router = createBrowserRouter([
                     <ToyDetails></ToyDetails>,
                 </ParivetRoutes>,
                    
-                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params?.id}`)
+                loader: ({ params }) => fetch(`https://bf-toy-cars-server.vercel.app/toys/${params?.id}`)
 
             },
             {
